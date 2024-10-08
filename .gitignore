@@ -2,3 +2,4 @@ __py*
 *.sh
 target
 venv
+api_server
