@@ -1,4 +1,4 @@
-target
-Cargo*
 __py*
 *.sh
+target
+venv
