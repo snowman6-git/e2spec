@@ -23,38 +23,25 @@ fn sysinfo() -> serde_json::Value{ //리턴값을 적어야함, 패키지 밸류
         "vmem_total": togb(sys.total_swap()),
     });
     return info
-    //println!("{info:?}"); //타입 출력
 }
 
-//#[derive(Serialize, Debug)] // Debug 트레이트 추가
-//struct Item {
-  //  str: String,
-    //int: i32,
-//}
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let info = sysinfo();
-    //let json = serde_json::to_string(&info).unwrap();
-    
     println!("sysinfo {}", info);
-
     let client = Client::new();
-    //let item = Item {
-        //str: String::from("str value"),
-        //int: 32,
-    //};
-    //println!("{:?}", item); // Debug 형식으로 출력
-
+    //let response = client.post("https://aa2.e2spec.p-e.kr/myinfo/")        
     let response = client.post("http://localhost:8000/myinfo/")        
         .json(&info) // JSON 데이터 전송
-        .send()
-        .await?;
-    // 응답을 HashMap으로 파싱
-    //let response_body: HashMap<String, serde_json::Value> = response.json().await?;
-    
-    println!("{:?}", response);
-
+        .send()//보내고
+        .await?//기다리고
+        .text()//받기를
+        .await?;//기다리기
+    println!("링크가 생성되었어요: {:?}", response);
+    let mut input = String::new();
+    std::io::stdin();
+    .read_line(&mut input)
     Ok(())
 }
 
