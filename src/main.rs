@@ -40,8 +40,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .await?;//기다리기
     println!("링크가 생성되었어요: {:?}", response);
     let mut input = String::new();
-    std::io::stdin();
-    .read_line(&mut input)
+    std::io::stdin()
+    .read_line(&mut input);
     Ok(())
 }
 
