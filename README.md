@@ -21,6 +21,10 @@
 
 한두번이면 해주겠는데 주변에 한둘이 아니라고요? 지금 다운로드.
 
+0.2a
+
+![image](https://github.com/user-attachments/assets/308e645f-831e-4cb7-970a-48c2ecbc6446)
+
 |OS|아키택쳐|테스트|
 |:----:|:-------:|:-----:|
 |Archlinux|x86/x64|✅|
