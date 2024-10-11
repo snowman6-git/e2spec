@@ -1,8 +1,8 @@
 [package]
-name = "tauri-app"
+name = "e2spec"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "watch spec for beginner or non-major user"
+authors = ["snowman6"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
