@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0",
-  "productName": "tauri-app",
+  "productName": "e2spec",
   "version": "0.1.0",
   "identifier": "com.e2spec.app",
   "build": {
