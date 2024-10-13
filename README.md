@@ -22,9 +22,13 @@
 
 |OS|아키택쳐|테스트|
 |:----:|:-------:|:-----:|
-|Archlinux|x86/x64|✅|
+|Archlinux+Hyprland|x86/x64|✅|
 |Ubuntu|x86/x64|✅|
 |Windows|x86/x64|⏳|
+
+Hyprland also working
+
+![image](https://github.com/user-attachments/assets/ee219704-cb4e-475c-8700-fe72b04f284e)
 
 0.1a
 
