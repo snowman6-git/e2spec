@@ -1,10 +1,11 @@
 # e2spec
 
 ### version 0.1a: 일부기능을 제외한 실행가능한 앱
+### version 0.3a: ui대폭개선 + 
 
 |작업중|구조완성|거의완료|완성|
 |:----:|:-------:|:------:|:------:|
-||ui|
+|||ui|
 ||공개서버|
 |유저순위|
 |벤치마크|
@@ -27,15 +28,17 @@
 |Windows|x86/x64|⏳|
 
 Hyprland also working
-
 ![image](https://github.com/user-attachments/assets/ee219704-cb4e-475c-8700-fe72b04f284e)
 
-0.1a
 
-![image](https://github.com/user-attachments/assets/308e645f-831e-4cb7-970a-48c2ecbc6446)
+0.3a
+
+![image](https://github.com/user-attachments/assets/d93209de-ff07-4fb7-b2ca-f85b258657da)
 
 0.2a
 
 ![image](https://github.com/user-attachments/assets/3ac81576-d68d-4c8f-b838-2d542a6432e7)
 
+0.1a
 
+![image](https://github.com/user-attachments/assets/308e645f-831e-4cb7-970a-48c2ecbc6446)
