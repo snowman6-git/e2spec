@@ -19,7 +19,6 @@ const currentView = computed(() => {
 
 <template>
   <component :is="currentView" />
-  <router-view></router-view>
 </template>
 
 <style scoped>

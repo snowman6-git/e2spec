@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "identifier": "com.e2spec.app",
   "build": {
-    "frontendDist": "../src"
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run generate",
+    "devUrl": "http://localhost:5173",
+    "frontendDist": "../dist"
   },
   "app": {
     "withGlobalTauri": true,
@@ -12,7 +15,7 @@
       {
         "title": "e2spec",
         "width": 350,
-        "height": 450
+        "height": 600
         
       }
     ],
