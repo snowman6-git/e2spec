@@ -1,24 +1,42 @@
 <script setup>
 
 const { invoke } = window.__TAURI__.core;
-invoke('ramfresh').then(
-    console.log("AAA")
+
+const details = ref([
+//   { title: "CPU", value: "21.8%" },
+//   { title: "RAM", value: "12GB / 72GB" },
+//   { title: "Disk", value: "120GB of 495GB" },
+//   { title: "GPU", value: "10%" },
+]);
+
+const os = ref([]);
+
+
+invoke('ramfresh').then((info) => {
+    console.log(info)
+})
+
+invoke('sysinfo').then(
+    (info) => {
+        os.value.push({ title: `${info["OS"]} ${info["kernal"]}`, ment: "Your OS is"});
+        details.value.push({ title: "CPU", value: `${info["cpu_name"]}`});
+        details.value.push({ title: "RAM", value: `${info["mem_used"]} / ${info["mem_total"]}`});
+        details.value.push({ title: "DISK", value: `${info["disk_used"]} / ${info["disk_total"]}`});
+    }
 )
+
+
+const emit = defineEmits([
+  'update:title', 'update:value'
+]);
+
+emit('update:title', "A");
 
 import Details from '../components/Details.vue'
 import Ment from '../components/Ment.vue'
 import { ref } from 'vue';
 
-const details = ref([
-  { title: "CPU", value: "21.8%" },
-  { title: "RAM", value: "12GB / 72GB" },
-  { title: "Disk", value: "120GB of 495GB" },
-  { title: "GPU", value: "10%" },
-]);
 
-const os = ref([
-  { title: "Windows 10", value: "welcome window user!" },
-]);
 
 
 </script>
@@ -31,13 +49,13 @@ const os = ref([
 
     <div id="os_name">
         <div v-for="(option, index) in os" :key="index">
-            <Ment :title="option.title" :details="option.value"/>
+            <Ment :title="option.title" :details="option.ment"/>
         </div>
     </div>
     
     <div id="details">
         <div v-for="(option, index) in details" :key="index">
-            <Details :title="option.title" :details="option.value"/>
+            <Details v-model:title="option.title" v-model:details="option.value"/>
         </div>
     </div>
 
