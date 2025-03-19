@@ -5,9 +5,9 @@
   "identifier": "com.e2spec.app",
   "build": {
     "beforeDevCommand": "npm run dev",
-    "beforeBuildCommand": "npm run generate",
+    "beforeBuildCommand": "npm run build",
     "devUrl": "http://localhost:5173",
-    "frontendDist": "../dist"
+    "frontendDist": "../e2spec-vue/dist"
   },
   "app": {
     "withGlobalTauri": true,
