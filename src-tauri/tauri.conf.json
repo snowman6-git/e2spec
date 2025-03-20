@@ -15,8 +15,10 @@
       {
         "title": "e2spec",
         "width": 350,
-        "height": 600
-        
+        "height": 600,
+        "resizable": false,
+        "maximizable": false,
+        "minimizable": false
       }
     ],
     "security": {
