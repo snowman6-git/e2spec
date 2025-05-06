@@ -23,6 +23,6 @@ defineProps({
 #details{
   font-size: 0.75rem;
   opacity: 0.6;
-  transform:translateY(0.5rem);
+  transform:translateY(0.3rem);
 }
 </style>

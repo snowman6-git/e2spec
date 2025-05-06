@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'NEXON Lv1';
-  src: url('assets/font.woff') format('woff');
+  src: url('/font.woff') format('woff');
 }
 
 :root{font-family: "NEXON Lv1";}
